@@ -1,0 +1,100 @@
+body {
+    background: url(./bj.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#form{
+    width: 400px;
+    height: 500px;
+    background-color: lightgray;
+    float: left;
+    opacity: 0.9;
+    border-radius: 10px;
+    right: 100px;
+    top: 100px;
+    position: absolute;
+}
+.title{
+    font-size: 30px;
+    font-weight: bolder;
+    padding-left: 25px;
+    height: 20px;
+}
+.title0{
+    padding-left: 25px;
+    color: gray;
+}
+.inputList{
+    float: left;
+    height: 25px;
+    padding-top: 45px;
+}
+.inputList p{
+    height: 10px;
+    float: left;
+    width: 50px;
+    padding-left: 25px;
+    margin-top: 5px;
+}
+.inputList input{
+    height: 30px;
+    border-radius: 5px;
+    border:1px solid black;
+    margin-left: 25px;
+    width: 200px;
+    padding-left: 15px;
+}
+.inputList div{
+    color: red;
+    font-size: 13px;
+    padding-left: 100px;
+}
+#returns{
+    float: left;
+    height: 25px;
+    padding-top: 45px;
+}
+#returns div{
+    color: red;
+    font-size: 13px;
+    padding-left: 100px;
+}
+#returns p{
+    height: 10px;
+    float: left;
+    width: 50px;
+    padding-left: 25px;
+    margin-top: 5px;
+}
+#returns input{
+    height: 30px;
+    border-radius: 5px;
+    border:1px solid black;
+    margin-left: 25px;
+    width: 100px;
+    padding-left: 15px;
+    float: left;
+}
+#returns button{
+    background-color: white;
+    border:1px solid white;
+    border-radius: 5px;
+    float: left;
+    height: 35px;
+    width: 100px;
+    color:black;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+button{
+    background-color: deepskyblue;
+    color: white;
+    height: 35px;
+    width: 250px;
+    float: left;
+    border: 1px solid deepskyblue;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 55px;
+}
+
