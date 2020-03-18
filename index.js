@@ -14,11 +14,13 @@ $(function() {
         isphone = false,
         isnum = false;
     var count=60;
-    $name.focus(()=>{
-        $names.html('最长14个英文或7个汉字')
+
+    $name.focus(function(){
+        $names.html('最长14个英文或7个汉字');
     });
-    $psw.focus(()=>{
-        $psws.html('长度为8~14个字符,不能有中文和空格')
+
+    $psw.focus(function(){
+        $psws.html('长度为8~14个字符,不能有中文和空格');
     });
 
     $name.blur(function(){
@@ -47,7 +49,7 @@ $(function() {
         }
     });
 
-    $phone.blur(()=>{
+    $phone.blur(function(){
         if(!$phone.val()){
             $phones.html("手机号码不能为空")  
         }
@@ -59,15 +61,15 @@ $(function() {
         }
     });
 
-    $num.click(()=>{
+    $num.click(function(){
         if(!$phone.val()){
             $phones.html("手机号码不能为空")  
         }else{
             $num.addClass('disable').attr({'disabled':'disabled'});
-        var time = setInterval(()=>{
+        var time = setInterval(function(){
             $num.html(count--);
         },1000);
-        setTimeout(()=>{
+        setTimeout(function(){
             $num.removeClass('disable').removeAttr('disabled');
             clearInterval(time);
             $num.html('获取验证码');
@@ -76,7 +78,7 @@ $(function() {
         }
         
     });
-    $tests.blur(()=>{
+    $tests.blur(function(){
         if(!$tests.val()){
             $nums.html('请输入验证码')
             isnum = false;
@@ -86,7 +88,7 @@ $(function() {
         }
     });
 
-    $button.click(()=>{
+    $button.click(function(){
         if(! (isname && ispsw && isphone && isnum)){
             alert('注册失败')
         }else{
