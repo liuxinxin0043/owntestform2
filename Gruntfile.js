@@ -1,29 +1,46 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     grunt.initConfig({
+
         htmlmin: {
             options: {
-                collapseWhitespace: true,
-                preserveLineBreaks: false
+                collapseWhitespace: true
             },
             files: {
-                src: './index.html',
-                dest: 'dist/index.html'
-
+                src: "dist/index.html",
+                dest: "dist/index.html"
             }
         },
         cssmin: {
-            'dist/index.css': 'index.css'
+            "dist/index.css": "dist/index.css"
         },
         uglify: {
-            release:{
+            release: {
                 files: {
-                  'dist/index.js': 'index.js',
+                    "dist/index.js": "dist/index.js"
                 }
-              }
+            }
+        },
+        copy: { 
+            html: {
+                src: "./index.html", 
+                dest: "./dist/index.html"
+            },
+            css: {
+                src: "./index.css",
+                dest: "./dist/index.css"
+            },
+            js: {
+                src: "./index.js",
+                dest: "./dist/index.js"
+            }
         }
     })
-    grunt.loadNpmTasks('grunt-contrib-htmlmin')
-    grunt.loadNpmTasks('grunt-contrib-cssmin')
-    grunt.loadNpmTasks('grunt-contrib-uglify')
-    grunt.registerTask('minify', ['htmlmin', 'cssmin', 'uglify'])
-}
+
+
+    grunt.loadNpmTasks("grunt-contrib-htmlmin");
+    grunt.loadNpmTasks("grunt-contrib-copy");
+    grunt.loadNpmTasks("grunt-contrib-cssmin");
+    grunt.loadNpmTasks("grunt-contrib-uglify");
+
+    grunt.registerTask("release", ['copy', 'htmlmin', 'cssmin', 'uglify']);
+} 
